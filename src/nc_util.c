@@ -72,7 +72,7 @@ nc_set_reuseaddr(int sd)
     reuse = 1;
     len = sizeof(reuse);
 
-    return setsockopt(sd, SOL_SOCKET, SO_REUSEADDR, &reuse, len);
+    return setsockopt(sd, SOL_SOCKET, SO_REUSEPORT, &reuse, len);
 }
 
 /*
